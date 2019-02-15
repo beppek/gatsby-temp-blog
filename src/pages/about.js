@@ -36,12 +36,11 @@ export default () => (
       and improve the developer experience.
     </p>
     <p>
-      I'm also a big science fiction nerd, especially Star Trek and similarly
-      inspired stories. To me, exploring the unknown is what intrigues me,
-      perhaps unsurprising given my history of travelling the world. I believe
-      that science fiction has an important role to play in the world of today,
-      by either warning of things that could happen or inspiring us with the
-      wonders our future could hold in store if we only make it so.
+      The tools I love to use are React, Koa, Node, MongoDB and GraphQL. I have
+      recently discovered Neo4j and have decided to learn how to use this
+      powerful database in my systems. Graph databases seem like the future in
+      todays data-heavy applications as they seem to be the most performant at
+      handling interconnected data.
     </p>
     <h4>My mission</h4>
     <p>
