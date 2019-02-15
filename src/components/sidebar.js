@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import {
   FaHome,
-  FaUserSecret,
+  FaUserAstronaut,
   FaLinkedin,
   FaGithub,
   FaHashtag
@@ -134,13 +134,13 @@ const NameBoard = styled.h5`
   }
 `
 
-export default ({ title, authorName }) => (
+export default ({ title, authorName, authorDescription }) => (
   <Sidebar>
     <StyledLink to="/">
       <SiteTitle>{title}</SiteTitle>
     </StyledLink>
     <Logo src={image} alt={authorName} />
-    <NameBoard>{authorName}</NameBoard>
+    <NameBoard>{authorDescription}</NameBoard>
     <MenuWrapper>
       <div>
         <p>
@@ -150,7 +150,7 @@ export default ({ title, authorName }) => (
         </p>
         <p>
           <StyledLink to="/about">
-            <FaUserSecret /> <span>About</span>
+            <FaUserAstronaut /> <span>About</span>
           </StyledLink>
         </p>
         <p>

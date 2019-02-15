@@ -5,6 +5,8 @@ import styled from 'styled-components'
 
 import Sidebar from './sidebar'
 
+import './layout.css'
+
 const Container = styled.div`
   display: flex;
   height: 100vh;
@@ -14,9 +16,10 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  overflow: scroll;
+  overflow: auto;
   padding: 20px;
   color: #7e7e7e;
+  overflow-x: hidden;
 `
 
 const Query = graphql`
@@ -24,7 +27,9 @@ const Query = graphql`
     site {
       siteMetadata {
         title
+        siteDescription
         authorName
+        authorDescription
       }
     }
   }
@@ -34,7 +39,12 @@ export default ({ children }) => (
   <StaticQuery
     query={Query}
     render={data => {
-      const { title, siteDescription, authorName } = data.site.siteMetadata
+      const {
+        title,
+        siteDescription,
+        authorName,
+        authorDescription
+      } = data.site.siteMetadata
       return (
         <>
           <Helmet>
@@ -119,7 +129,11 @@ export default ({ children }) => (
             <title>{title}</title>
           </Helmet>
           <Container>
-            <Sidebar title={title} authorName={authorName} />
+            <Sidebar
+              title={title}
+              authorName={authorName}
+              authorDescription={authorDescription}
+            />
             <Content>{children}</Content>
           </Container>
         </>

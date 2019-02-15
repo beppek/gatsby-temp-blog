@@ -21,6 +21,7 @@ const PostLink = styled(Link)`
 `
 
 export default ({ data }) => {
+  console.log(data)
   return (
     <>
       {data.map(({ node }) => {

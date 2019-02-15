@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Max Karlsson',
     siteDescription: 'A Tech and Developer blog by Max Karlsson',
-    authorName: 'Max Karlsson'
+    authorName: 'Max Karlsson',
+    authorDescription: 'Full-Stack Developer'
   },
   plugins: [
     {
@@ -23,7 +24,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'src',
-        path: `${__dirname}/src/blog-posts`
+        path: `${__dirname}/src/blog-posts/`
       }
     },
     {
@@ -41,7 +42,8 @@ module.exports = {
             options: {
               classPrefix: 'language-'
             }
-          }
+          },
+          'gatsby-remark-external-links'
         ]
       }
     },
