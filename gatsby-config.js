@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Tech Blog',
-    siteDescription: 'Tech Blog - A blog by Vimalraj Selvam',
-    authorName: 'Vimalraj Selvam'
+    title: 'Max Karlsson',
+    siteDescription: 'A Tech and Developer blog by Max Karlsson',
+    authorName: 'Max Karlsson'
   },
   plugins: [
     {
